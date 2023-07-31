@@ -13,17 +13,13 @@ const spanColor = document.querySelector('.color');
 
 // Functions
 const btnFunction = () => {
-    const randomNum = randomNumber();
-    console.log(randomNum)
-    for (let i = 0; i < colors.length; i++) {
-        document.body.style.backgroundColor = colors[i].length
-    }
+    const randomNum = randomNumber()
+    spanColor.textContent = colors[randomNum];
+    document.body.style.backgroundColor = colors[randomNum];
 }
 const randomNumber = () => {
     return Math.floor(Math.random() * colors.length)
 }
-
-
 
 
 
