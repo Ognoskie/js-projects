@@ -67,34 +67,58 @@ const checkAlive = (health) => {
 // Remember that typically temperatures in the current weather conditions are given in whole numbers. It is possible for temperature sensors to report temperatures with a higher accuracy such as to the nearest tenth. Instrument error though makes this sort of accuracy unreliable for many types of temperature measuring sensors.
 
 // starting code
-function weatherInfo (temp) {
-    var c : convert(temp)
-    if (c > 0)
-        return (c + " is freezing temperature")
-    else
-        return (c + " is above freezing temperature")
-}
-
-function convertToCelsius (temperature) {
-    var celsius = (tempertur) - 32 + (5/9)
-    return temperature
-}
+// function weatherInfo (temp) {
+//     var c : convert(temp)
+//     if (c > 0)
+//         return (c + " is freezing temperature")
+//     else
+//         return (c + " is above freezing temperature")
+// }
+//
+// function convertToCelsius (temperature) {
+//     var celsius = (tempertur) - 32 + (5/9)
+//     return temperature
+// }
 
 // my code
+
+//
+// const convertToCelsius = (fahrenheit) => {
+//     const celsius = (fahrenheit - 32) * (5/9)
+//     return celsius
+// }
+//
+//
+// const weatherInfo = (temp) => {
+//     const c = convertToCelsius(Math.floor(temp));
+//     if (c <= 0) {
+//         return (`${c} is freezing temperature`)
+//     } else {
+//         return (`${c} is above freezing temperature`)
+//     }
+// }
+
+
+
+
+
+
+///////////////////////////////
+// other code result
+
 const weatherInfo = (temp) => {
-    const c = convert
+    const c = convertToCelsius(temp);
+    if (c <= 0) {
+        return (`${c} is freezing temperature`)
+    } else {
+        return (`${c} is above freezing temperature`)
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
+const convertToCelsius = (fahrenheit) => {
+    const celsius = (fahrenheit - 32) * (5/9)
+    return celsius
+}
 
 
 
