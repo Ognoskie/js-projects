@@ -106,19 +106,67 @@ const checkAlive = (health) => {
 ///////////////////////////////
 // other code result
 
-const weatherInfo = (temp) => {
-    const c = convertToCelsius(temp);
-    if (c <= 0) {
-        return (`${c} is freezing temperature`)
-    } else {
-        return (`${c} is above freezing temperature`)
-    }
-}
+// const weatherInfo = (temp) => {
+//     const c = convertToCelsius(temp);
+//     if (c <= 0) {
+//         return (`${c} is freezing temperature`)
+//     } else {
+//         return (`${c} is above freezing temperature`)
+//     }
+// }
+//
+// const convertToCelsius = (fahrenheit) => {
+//     const celsius = (fahrenheit - 32) * (5/9)
+//     return celsius
+// }
 
-const convertToCelsius = (fahrenheit) => {
-    const celsius = (fahrenheit - 32) * (5/9)
-    return celsius
+
+
+
+
+
+//////////////////////////////////
+
+
+
+
+// Debug   function getSumOfDigits that takes positive integer to calculate sum of its digits. Assume that argument is an integer.
+//
+//    Example
+        // 123  => 6
+        // 223  => 7
+        // 1337 => 14
+
+
+
+// make a function
+const getSumOfDigits = (num) => {
+    let sum = 0;
+
 }
+// const getSumOfDigits
+
+// declare a variable for the sum
+
+// use split method to separate the integers
+
+// add integers
+
+// use the join method to add the integers back
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
