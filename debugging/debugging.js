@@ -142,6 +142,10 @@ const checkAlive = (health) => {
 // make a function
 const getSumOfDigits = (num) => {
     let sum = 0;
+    for (let i = 0; i < num.length; i++) {
+
+
+    }
 
 }
 // const getSumOfDigits
