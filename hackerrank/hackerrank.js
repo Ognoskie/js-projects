@@ -13,23 +13,154 @@
 // proportion of negative values
 // proportion of zeros
 
-function plusMinus(arr) {
-    let plus = 0;
-    let minus = 0;
-    let zero = 0;
+// my code
+// function plusMinus(arr) {
+//     let positive = 0;
+//     let negative = 0;
+//     let zero = 0;
+//
+//     for (let i = 0; i > arr.length; i++) {
+//         if (1 >= arr) {
+//             return ++positive;
+//         } else if (-1 <= arr) {
+//             return ++negative;
+//         } else {
+//             return ++zero;
+//         }
+//     }
+//     console.log(positive.toFixed(6));
+//     console.log(negative.toFixed(6));
+//     console.log(zero.toFixed(6));
+//
+// }
 
-    for (let i = 0; i > arr.length; i++) {
-        if (1 >= arr) {
-            return ++plus;
-        } else if (-1 <= arr) {
-            return ++minus;
-        } else {
-            return ++zero;
-        }
+// correct code
+
+// function plusMinus(arr) {
+//   let positive = [];
+//   let negative = [];
+//   let zero = [];
+//
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 0) {
+//       zero.push(arr[i]);
+//     } else if (arr[i] < 0) {
+//       negative.push(arr[i]);
+//     } else {
+//       positive.push(arr[i]);
+//     }
+//   }
+//
+//   console.log(positive.length / arr.length);
+//   console.log(negative.length / arr.length);
+//   console.log(zero.length / arr.length);
+// }
+//
+
+//////////////////////////////////////// Mini-Max-Sum exercise /////////////////////////////////////////////////
+
+// Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+//
+//     Example
+//
+// The minimum sum is  and the maximum sum is . The function prints
+//
+// 16 24
+// Function Description
+//
+// Complete the miniMaxSum function in the editor below.
+//
+//     miniMaxSum has the following parameter(s):
+//
+// arr: an array of  integers
+// Print
+//
+// Print two space-separated integers on one line: the minimum sum and the maximum sum of  of  elements.
+//
+//     Input Format
+//
+// A single line of five space-separated integers.
+//
+//     Constraints
+//
+//
+// Output Format
+//
+// Print two space-separated long integers denoting the respective minimum and maximum values that can be calculated by summing exactly four of the five integers. (The output can be greater than a 32 bit integer.)
+//
+// Sample Input
+//
+// 1 2 3 4 5
+// Sample Output
+//
+// 10 14
+// Explanation
+//
+// The numbers are , , , , and . Calculate the following sums using four of the five integers:
+//
+//     Sum everything except , the sum is .
+//     Sum everything except , the sum is .
+//     Sum everything except , the sum is .
+//     Sum everything except , the sum is .
+//     Sum everything except , the sum is .
+//     Hints: Beware of integer overflow! Use 64-bit Integer.
+//
+//     Need help to get started? Try the Solve Me First problem
+
+
+
+// 1. sorting the arr
+// 2. loop over while adding all elements and asigning to sum var
+// 3. for min, minus the last element from sum
+// 4. for max, minus the first element from sum
+
+// function miniMaxSum(arr) { let min = 0; let max = 0; let sum = 0;
+//
+//     let sortedArr = arr.sort((a, b) => a - b);
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i];
+//     }
+//     min = sum - arr[arr.length - 1];
+//     max = sum - arr[0];
+//
+//     console.log(min, max);
+// }
+const miniMaxSum = (arr) => {
+let min = 0;
+let max = 0;
+let sum = 0;
+
+let sortArr = arr.sort((a, b) => a - b);
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
     }
-    console.log(plus.toFixed(6));
-    console.log(minus.toFixed(6));
-    console.log(zero.toFixed(6));
+    min = sum - arr[arr.length - 1];
+    max = sum - arr[0];
 
+    console.log(min, max);
 }
-plusMinus();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
