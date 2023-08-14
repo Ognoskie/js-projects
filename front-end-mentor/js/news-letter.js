@@ -15,3 +15,58 @@
 // 8. Download the project and go through the README.md file. This will provide further details about the project and help you get set up.
 
 
+<!-- Sign-up form start -->
+//
+// Stay updated!
+//
+//     Join 60,000+ product managers receiving monthly updates on:
+//
+//     Product discovery and building what matters
+// Measuring to ensure updates are a success
+// And much more!
+//
+//     Email address
+// email@company.com
+//
+// Subscribe to monthly newsletter
+//
+// <!-- Sign-up form end -->
+//
+// <!-- Success message start -->
+//
+// Thanks for subscribing!
+//
+//     A confirmation email has been sent to ash@loremcompany.com.
+//     Please open it and click the button inside to confirm your subscription.
+//
+//     Dismiss message
+//
+// <!-- Success message end -->
+
+
+
+////////////////////////////////////// Global variables /////////////////////////////////
+
+
+
+
+
+
+
+
+
+//////////////////////////////////// Functions /////////////////////////////////////////
+
+// const bodyColor = () => {
+//     document.body.style.backgroundColor = '';
+// };
+
+
+
+
+
+
+
+
+/////////////////////////////////// Event listeners //////////////////////////////////////
+// window.addEventListener('load', bodyColor)
