@@ -1,3 +1,17 @@
 body {
-    background-color: papayawhip;
+    background-color: #2B2A4C;
+}
+.hero-container {
+    display: flex;
+    flex-direction: column;
+
+}
+.hero-row {
+    display: flex;
+    justify-content: center;
+}
+.white-box {
+    background-color: white;
+    width: 50px;
+    height: 50px;
 }
