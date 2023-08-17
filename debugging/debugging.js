@@ -138,26 +138,8 @@ const checkAlive = (health) => {
         // 1337 => 14
 
 
+const getSumOfDigits = number => number.toString().split('').map(Number).reduce((a, b) => a + b);
 
-// make a function
-const getSumOfDigits = (num) => {
-    let sum = 0;
-    for (let i = 0; i < num.length; i++) {
-        num.reduce((a, b) => a + b);
-
-    }
-return num;
-}
-
-// const getSumOfDigits
-
-// declare a variable for the sum
-
-// use split method to separate the integers
-
-// add integers
-
-// use the join method to add the integers back
 
 
 
