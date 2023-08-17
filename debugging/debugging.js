@@ -39,19 +39,19 @@
 // The function receives one parameter health which will always be a whole number between -10 and 10.
 
 
-const checkAlive = (health) => {
-    if (health > 0) {
-        return true
-    } else {
-        return false
-    }
-}
-
-// or
-
-const checkAlive = (health) => {
-    return health > 0;
-}
+// const checkAlive = (health) => {
+//     if (health > 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+//
+// // or
+//
+// const checkAlive = (health) => {
+//     return health > 0;
+// }
 
 
 //////////////////////////
@@ -138,7 +138,7 @@ const checkAlive = (health) => {
         // 1337 => 14
 
 
-const getSumOfDigits = number => number.toString().split('').map(Number).reduce((a, b) => a + b);
+// const getSumOfDigits = number => number.toString().split('').map(Number).reduce((a, b) => a + b);
 
 
 // Name on billboard
@@ -151,13 +151,19 @@ const getSumOfDigits = number => number.toString().split('').map(Number).reduce(
 
 
 const billboard = (name, price = 30) => {
-
+    let total = 0
+    for (let i = 0; i < name.length; i++) {
+        total += price
+    }
+    return total;
 }
+console.log(billboard("Hadufuns John", 40))
 
 
-
-
-
+// the second parameter is a default value in javascript but can be replaced by adding the second parameter when it is called
+// example:
+// ("Jeong-Ho Aristotelis") will be 600$
+// ("Hadufuns John",20) will be 260$ because it replaces the default value of 30 to 20;
 
 
 
