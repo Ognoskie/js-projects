@@ -150,14 +150,14 @@
 
 
 
-const billboard = (name, price = 30) => {
-    let total = 0
-    for (let i = 0; i < name.length; i++) {
-        total += price
-    }
-    return total;
-}
-console.log(billboard("Hadufuns John", 40))
+// const billboard = (name, price = 30) => {
+//     let total = 0
+//     for (let i = 0; i < name.length; i++) {
+//         total += price
+//     }
+//     return total;
+// }
+// console.log(billboard("Hadufuns John", 40))
 
 
 // the second parameter is a default value in javascript but can be replaced by adding the second parameter when it is called
@@ -165,11 +165,23 @@ console.log(billboard("Hadufuns John", 40))
 // ("Jeong-Ho Aristotelis") will be 600$
 // ("Hadufuns John",20) will be 260$ because it replaces the default value of 30 to 20;
 
+// Double Char
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+//
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
 
+function doubleChar(str) {
+    let strReturn = '';
+        for (let i = 0; i < str.length; i++) {
+          strReturn = str[i * 2].length
+        }
+    return strReturn
+}
 
-
-
-
+console.log(doubleChar("String"))
 
 
 
