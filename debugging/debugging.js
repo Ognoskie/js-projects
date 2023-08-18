@@ -139,6 +139,7 @@
 
 
 // const getSumOfDigits = number => number.toString().split('').map(Number).reduce((a, b) => a + b);
+// const getDoubleChar = str => str.split('').reduce((a, b) => a + b + b, '');
 
 
 // Name on billboard
@@ -176,21 +177,27 @@
 function doubleChar(str) {
     let strReturn = '';
         for (let i = 0; i < str.length; i++) {
-          strReturn = str[i * 2].length
+          strReturn += str[i] + str[i];
         }
     return strReturn
 }
 
 console.log(doubleChar("String"))
 
+// console.log(getDoubleChar("String"))
 
+// Welcome to the City
 
+// Create a method that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
+//
+//     Example:
+//
+// ['John', 'Smith'], 'Phoenix', 'Arizona'
+// This example will return the string Hello, John Smith! Welcome to Phoenix, Arizona!
 
-
-
-
-
-
-
+const sayHello = (name, city, state) => {
+    let person = name.join(' ')
+    return `Hello, ${person}! Welcome to ${city}, ${state}!`
+}
 
 
