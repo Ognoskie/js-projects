@@ -174,17 +174,22 @@
 // * "Hello World" -> "HHeelllloo  WWoorrlldd"
 // * "1234!_ "     -> "11223344!!__  "
 
-function doubleChar(str) {
-    let strReturn = '';
-        for (let i = 0; i < str.length; i++) {
-          strReturn += str[i] + str[i];
-        }
-    return strReturn
-}
-
-console.log(doubleChar("String"))
+// function doubleChar(str) {
+//     let strReturn = '';
+//         for (let i = 0; i < str.length; i++) {
+//           strReturn += str[i] + str[i];
+//         }
+//     return strReturn
+// }
+//
+// console.log(doubleChar("String"))
 
 // console.log(getDoubleChar("String"))
+
+
+
+
+
 
 // Welcome to the City
 
@@ -195,9 +200,73 @@ console.log(doubleChar("String"))
 // ['John', 'Smith'], 'Phoenix', 'Arizona'
 // This example will return the string Hello, John Smith! Welcome to Phoenix, Arizona!
 
-const sayHello = (name, city, state) => {
-    let person = name.join(' ')
-    return `Hello, ${person}! Welcome to ${city}, ${state}!`
+// const sayHello = (name, city, state) => {
+//     let person = name.join(' ')
+//     return `Hello, ${person}! Welcome to ${city}, ${state}!`
+// }
+
+
+
+// Selective fear of numbers
+// I've got a crazy mental illness. I dislike numbers a lot. But it's a little complicated: The number I'm afraid of depends on which day of the week it is... This is a concrete description of my mental illness:
+//
+// Monday --> 12
+//
+// Tuesday --> numbers greater than 95
+//
+// Wednesday --> 34
+//
+// Thursday --> 0
+//
+// Friday --> numbers divisible by 2
+//
+// Saturday --> 56
+//
+// Sunday --> 666 or -666
+//
+// Write a function which takes a string (day of the week) and an integer (number to be tested) so it tells the doctor if I'm afraid or not. (return a boolean)
+
+
+
+// my code which did not work
+// const AmIAfraid = (day, num) => {
+//     if (day === "Monday" && num === 12){
+//         return true
+//     } else if (day === "Tuesday" && num > 95){
+//         return true
+//     } else if (day === "Wednesday" && num === 34) {
+//         return true
+//     } else if (day === "Thursday" && num === 0) {
+//         return true
+//     } else if (day === "Friday" && num % 2 === 0) {
+//         return true
+//     } else if (day === "Saturday" && num === 56) {
+//         return true
+//     } else if (day === "Sunday" && (num === 666) || (num === -666)) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+
+
+// other code that worked
+const AmIAfraid = (day, num) => {
+    if (day === 'Monday' && num === 12) {
+        return true
+    } else if (day === 'Tuesday' && num > 95) {
+        return true;
+    } else if (day === 'Wednesday' && num === 34) {
+        return true;
+    } else if (day === 'Thursday' && num === 0) {
+        return true;
+    } else if (day === 'Friday' && num % 2 === 0) {
+        return true;
+    } else if (day === 'Saturday' && num === 56) {
+        return true;
+    } else if (day === 'Sunday' && ((num === -666) || (num === 666))) {
+        return true;
+    }
+    return false;
 }
-
-
