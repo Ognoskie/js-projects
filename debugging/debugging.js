@@ -252,21 +252,41 @@
 
 
 // other code that worked
-const AmIAfraid = (day, num) => {
-    if (day === 'Monday' && num === 12) {
-        return true
-    } else if (day === 'Tuesday' && num > 95) {
-        return true;
-    } else if (day === 'Wednesday' && num === 34) {
-        return true;
-    } else if (day === 'Thursday' && num === 0) {
-        return true;
-    } else if (day === 'Friday' && num % 2 === 0) {
-        return true;
-    } else if (day === 'Saturday' && num === 56) {
-        return true;
-    } else if (day === 'Sunday' && ((num === -666) || (num === 666))) {
-        return true;
-    }
-    return false;
-}
+// const AmIAfraid = (day, num) => {
+//     if (day === 'Monday' && num === 12) {
+//         return true
+//     } else if (day === 'Tuesday' && num > 95) {
+//         return true;
+//     } else if (day === 'Wednesday' && num === 34) {
+//         return true;
+//     } else if (day === 'Thursday' && num === 0) {
+//         return true;
+//     } else if (day === 'Friday' && num % 2 === 0) {
+//         return true;
+//     } else if (day === 'Saturday' && num === 56) {
+//         return true;
+//     } else if (day === 'Sunday' && ((num === -666) || (num === 666))) {
+//         return true;
+//     }
+//     return false;
+// }
+
+
+
+
+
+
+// NATO Phonetic Alphabet
+
+
+// Complete the function word (string) and returns a string that spells the word using the NATO phonetic alphabet.
+//
+//     There should be a space between each word in the returned string, and the first letter of each word should be capitalized.
+//
+//     For those of you that don't want your fingers to bleed, this kata already has a dictionary typed out for you.
+//
+// Examples
+// "hi"      -->  "Hotel India"
+// "abc"     -->  "Alpha Bravo Charlie"
+// "babble"  -->  "Bravo Alpha Bravo Bravo Lima Echo"
+// "Banana"  -->  "Bravo Alpha November Alpha November Alpha"
