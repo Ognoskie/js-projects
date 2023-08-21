@@ -243,7 +243,7 @@
 //
 // The secondary diagonal is:
 //
-//     4
+// 4
 // 5
 // 10
 // Sum across the secondary diagonal: 4 + 5 + 10 = 19
@@ -252,11 +252,44 @@
 // Note: |x| is the absolute value of x
 
 
-/////// code below
 
 
 
 
 
+
+// Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+//
+// For example, the square matrix  is shown below:
+//
+// 1 2 3
+// 4 5 6
+// 9 8 9
+
+// The left-to-right diagonal = 1 + 5 + 9 = 15
+
+// The right to left diagonal = 3 + 5 + 9 = 17
+
+// The right to left diagonal = 15 - 17 = 2.
+
+
+/////// code below ///////
+
+const diagonalDifference = (arr) => {
+    let sumArrA = 0;
+    let sumArrB = 0;
+    const arrDiagArrA = arr.map((row, i) => row[i]);
+        for (let num of arrDiagArrA) {
+            sumArrA += num
+        }
+    const arrDiagArrB = [...arr].reverse().map((row, i) => row[i]);
+    for (let num of arrDiagArrB) {
+        sumArrB += num
+    }
+   return Math.abs(sumArrA - sumArrB);
+}
+
+// one liner for the code above
+// Math.abs((arr.map((row, i) => row[i])).reduce((a, b) => a + b) - ([...arr].reverse().map((row, i) => row[i])).reduce((a, b) => a + b));
 
 
