@@ -293,3 +293,32 @@ const diagonalDifference = (arr) => {
 // Math.abs((arr.map((row, i) => row[i])).reduce((a, b) => a + b) - ([...arr].reverse().map((row, i) => row[i])).reduce((a, b) => a + b));
 
 
+// Viral Advertising
+
+
+// code
+
+
+
+const viralAdvertising = (n) => {
+    let totalOfLikes = 0;
+    let shared = 5;
+    for (let i = 0; i < n; i++) {
+        totalOfLikes = Math.floor(shared / 2) + totalOfLikes;
+        shared = Math.floor(shared / 2) * 3
+    }
+    return totalOfLikes
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
