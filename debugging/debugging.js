@@ -307,7 +307,7 @@ var nato = (function() {
     }
 
     return function(word) {
-
+        return  [...word.toUpperCase()].map(v=>letters[v]).join(' ');
     }
 })()
 
