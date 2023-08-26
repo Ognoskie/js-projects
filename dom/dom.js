@@ -7,6 +7,7 @@ const listItems = document.querySelectorAll('#list li');
 const button = document.getElementById('button');
 const input = document.getElementById('input');
 const element = document.getElementById('element');
+const elementTwo = document.querySelector('#element-two');
 
 
 
@@ -39,7 +40,9 @@ const handleClick = () => {
 const changeText = () => {
     element.innerText = 'Thanks!';
 };
-
+const toggleColor = (isEntering) => {
+    elementTwo.style.background = isEntering ? 'orange' : 'black';
+};
 
 
 
@@ -63,7 +66,12 @@ if(listItems.length > 1) {
 };
 button.addEventListener('click', handleClick);
 element.addEventListener("mouseover", changeText);
-
+elementTwo.addEventListener('mouseover', () => {
+    toggleColor(true)
+});
+elementTwo.addEventListener('mouseout', () => {
+    toggleColor(false)
+});
 
 
 
