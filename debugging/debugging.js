@@ -344,3 +344,15 @@ var nato = (function() {
 //
 // 1+2+3+4=10 and 1*2*3*4=24, LCM(10,24)=120
 
+
+
+function parameter(n) {
+    const sum = String(n).split('').reduce((acc, val) => acc + +val, 0);
+    const mult = String(n).split('').reduce((acc, val) => acc * +val, 1);
+    let LCM = mult;
+
+    while(n) {
+        if(!(LCM % mult) && !(LCM % sum)) return LCM;
+        LCM += mult;
+    }
+}
