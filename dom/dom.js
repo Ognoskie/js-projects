@@ -8,7 +8,7 @@ const button = document.getElementById('button');
 const input = document.getElementById('input');
 const element = document.getElementById('element');
 const elementTwo = document.querySelector('#element-two');
-
+const button = document.querySelector('#btn');
 
 
 
@@ -72,7 +72,7 @@ elementTwo.addEventListener('mouseover', () => {
 elementTwo.addEventListener('mouseout', () => {
     toggleColor(false)
 });
-
+btn.addEventListener('click', removeRedCircle);
 
 
 
