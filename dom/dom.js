@@ -43,7 +43,9 @@ const changeText = () => {
 const toggleColor = (isEntering) => {
     elementTwo.style.background = isEntering ? 'orange' : 'black';
 };
+const removeRedCircle = () => {
 
+};
 
 
 
