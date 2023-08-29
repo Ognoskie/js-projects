@@ -353,7 +353,21 @@ const viralAdvertising = (n) => {
 // There are three pairs of socks.
 
 
+// code
 
+const sockMerchant = (n, ar) => {
+    let totalPairs = 0;
+    ar.sort();
+    for (let i =0; i < n;) {
+        if (ar[i] === ar[i +1]) {
+            totalPairs ++;
+            i = i + 2;
+        } else {
+            i++;
+        }
+    }
+    return totalPairs;
+}
 
 
 
