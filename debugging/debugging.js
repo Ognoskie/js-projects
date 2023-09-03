@@ -375,10 +375,14 @@ export default addTwo;
 
 
 
+import addTwo from "./addTwo";
+
+// the rest of the mathOperations.js code goes here
 
 
+import { addTwo } from "./addTwo";
 
-
+// the rest of the mathOperations.js code goes here
 
 
 
