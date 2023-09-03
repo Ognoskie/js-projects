@@ -413,5 +413,79 @@ process.stdin.on('data', (chunk) => {
 
 
 
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+
+let stdin = '';
+process.stdin.on('data', (chunk) => {
+    stdin += chunk;
+}).on('end', () => {
+    const lines = stdin.trim().split('\n');
+    for (const line of lines) {
+        const n = parseInt(line);
+        if (isHappyNumber(n)) {
+            process.stdout.write('1\n');
+        } else {
+            process.stdout.write('0\n');
+        }
+    }
+});
+
+const isHappyNumber = (n) => {
+    const seen = new Set();
+    while (n !== 1) {
+        n = String(n)
+            .split('')
+            .map(Number)
+            .reduce((sum, digit) => sum + digit * digit, 0);
+        if (seen.has(n)) {
+            return false;
+        }
+        seen.add(n);
+    }
+    return true;
+}
+
+
+
+// 1. `process.stdin.resume();` and `process.stdin.setEncoding('utf8');`:
+// - These lines prepare the standard input (stdin) to receive data. `process.stdin.resume();` resumes the stdin stream if it was paused, and `process.stdin.setEncoding('utf8');` sets the encoding for stdin to UTF-8.
+//
+// 2. `let stdin = '';`:
+// - This initializes an empty string called `stdin`, which will be used to accumulate the input data.
+//
+// 3. `process.stdin.on('data', (chunk) => { ... })`:
+// - This event listener listens for incoming data on stdin. When data is received, the provided callback function is executed.
+// - `chunk` represents a piece of input data (usually a line of text) that is read from stdin.
+// - Inside the callback function, the `chunk` is concatenated to the `stdin` string to accumulate the input.
+//
+// 4. `process.stdin.on('end', () => { ... })`:
+// - This event listener is triggered when there's no more data to read from stdin, indicating the end of input.
+// - Inside the callback function for 'end', the code processes the accumulated input.
+//
+// 5. `const lines = stdin.trim().split('\n');`:
+// - Here, the `stdin` string is trimmed to remove any leading or trailing whitespace, and then it is split into an array of lines using `'\n'` (newline) as the separator. Each line represents one input number.
+//
+// 6. `for (const line of lines) { ... }`:
+// - This loop iterates through each line of input.
+//
+// 7. `const n = parseInt(line);`:
+// - Inside the loop, each line (representing a number) is converted to an integer using `parseInt()`. This allows us to work with the number as a numeric value.
+//
+// 8. `if (isHappyNumber(n)) { ... } else { ... }`:
+// - For each parsed number, the code checks if it's a happy number using the `isHappyNumber` function.
+//
+// 9. `process.stdout.write('1\n');` and `process.stdout.write('0\n');`:
+// - If the number is a happy number, the code prints '1' followed by a newline character ('\n') to standard output.
+// - If the number is not a happy number, it prints '0' followed by a newline character to standard output.
+//
+// 10. `isHappyNumber` function:
+// - The `isHappyNumber` function checks whether a given number is a happy number or not. It follows the algorithm described in the problem statement, repeatedly summing the squares of the digits until it either reaches 1 or enters a cycle.
+//
+//     So, the code reads lines of input, checks if each number is a happy number, and prints '1' or '0' accordingly for each number.
+
+
+
+
 
 
