@@ -511,3 +511,182 @@ const isHappyNumber = (n) => {
 // Expected Output
 // Download Test 2 Output
 // another
+
+
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+
+let stdin = '';
+process.stdin.on('data', (chunk) => {
+    stdin += chunk;
+}).on('end', () => {
+    const lines = stdin.trim().split('\n');
+
+    for (const line of lines) {
+        const words = line.split(' ');
+        let longestWord = '';
+
+        for (const word of words) {
+            if (word.length > longestWord.length) {
+                longestWord = word;
+            }
+        }
+
+        process.stdout.write(`${longestWord}\n`);
+    }
+});
+
+// refactored
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function findLongestWord(line) {
+    const words = line.split(' ');
+    return words.reduce((longest, current) => (current.length > longest.length ? current : longest), '');
+}
+
+rl.on('line', (input) => {
+    const longestWord = findLongestWord(input);
+    console.log(longestWord);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
