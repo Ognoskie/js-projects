@@ -515,8 +515,13 @@ const countingValleys = (steps, path) => {
 // jump(5).png
 
 
+// my code
+function jumpingOnClouds(c) {
+    let totalJumps = 0;
+    const numToFilter = 1;
+    const filteredArr = c.filter((element, index) => !numToFilter.includes(index));
 
-
+}
 
 
 
