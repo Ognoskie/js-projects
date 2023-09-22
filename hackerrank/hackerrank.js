@@ -516,12 +516,50 @@ const countingValleys = (steps, path) => {
 
 
 // my code
-function jumpingOnClouds(c) {
-    let totalJumps = 0;
-    const numToFilter = 1;
-    const filteredArr = c.filter((element, index) => !numToFilter.includes(index));
+const jumpingOnClouds = (c) => {
+    let n = c.length;
+    let jumps = 0;
+    let i = 0;
 
+    while(i < n - 1) {
+        if (i + 2 < n && c[i + 2] === 0) {
+            i += 2;
+        } else {
+            i += 1;
+        }
+        jumps += 1;
+    }
+    return jumps;
 }
+
+
+function jumpingOnClouds(c) {
+    // Get the total number of clouds in the array.
+    let n = c.length;
+    // Initialize the number of jumps to 0.
+    let jumps = 0;
+    // Initialize the current position to 0 (starting position).
+
+    let i = 0;
+
+    // Loop until Emma reaches the last cloud.
+    while (i < n - 1) {
+        // If it's possible to make a long jump (i.e., there are at least two more clouds ahead
+        // and the next cloud is a cumulus cloud denoted by 0), make a long jump.
+        if (i + 2 < n && c[i + 2] === 0) {
+            i += 2; // Jump 2 clouds ahead.
+        } else {
+            // Otherwise, make a short jump (1 cloud ahead).
+            i += 1;
+        }
+        // Increment the number of jumps.
+        jumps += 1;
+    }
+
+    // Return the total number of jumps required to reach the last cloud.
+    return jumps;
+}
+
 
 
 
