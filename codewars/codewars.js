@@ -2,3 +2,7 @@
 //
 //     For instance, for the list [3, 4, 3, 6] , the function should return 10.
 
+
+const sumNoDuplicates = (numList) => {
+    numList.filter
+}
