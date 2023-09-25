@@ -1,6 +1,6 @@
 async function fetchData() {
 
-    const apiUrl = 'https://fakestoreapi.com/products';
+    const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
 
     try {
         const response = await fetch(apiUrl);
