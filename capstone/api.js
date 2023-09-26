@@ -1,6 +1,6 @@
 async function fetchData() {
 
-    const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
+    const apiUrl = 'https://github.com/nationalparkservice/nps-api-samples';
 
     try {
         const response = await fetch(apiUrl);
