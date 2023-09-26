@@ -2,6 +2,9 @@ async function fetchData() {
 
     // const NPS_API_URL = `https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=${NPS_API}`;
     const NPS_API_URL = `https://developer.nps.gov/api/v1/parks?stateCode=TX&limit=50&start=0&api_key=${NPS_API}`;
+    // const CAMP_SITE_URL = `http://api.amp.active.com/camping/campsites?contractCode=CO&parkId=50032&api_key=${CAMP_SITE_API}`;
+
+
     try {
         const response = await fetch(NPS_API_URL);
         if (!response.ok) {
