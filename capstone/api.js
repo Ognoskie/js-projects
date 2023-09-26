@@ -1,9 +1,9 @@
 async function fetchData() {
 
-    const apiUrl = 'https://github.com/nationalparkservice/nps-api-samples';
-
+    // const NPS_API_URL = `https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=${NPS_API}`;
+    const NPS_API_URL = `https://developer.nps.gov/api/v1/parks?stateCode=TX&limit=50&start=0&api_key=${NPS_API}`;
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(NPS_API_URL);
         if (!response.ok) {
             throw new Error(`API request failed with status: ${response.status}`);
         }
