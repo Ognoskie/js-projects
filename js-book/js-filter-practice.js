@@ -1,6 +1,5 @@
 const filterEvenNumbers = (numbers) => {
-    numbers.filter((number) => number % 2 === 0)
-    return filterEvenNumbers(numbers);
+    return numbers.filter((number) => number % 2 === 0)
 }
 
 
