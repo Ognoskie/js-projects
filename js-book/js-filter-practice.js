@@ -26,4 +26,13 @@ const words = ["apple", "banana", "cherry", "date", "fig", "grape"];
 const minLength = 5;
 
 
+const filterByLength = (strings, minLength) => {
 
+}
+
+
+// Test the function with an example input:
+const words = ["apple", "banana", "cherry", "date", "fig", "grape"];
+const minLength = 5;
+const filteredWords = filterByLength(words, minLength);
+console.log(filteredWords); // Should print ["banana", "cherry"]
