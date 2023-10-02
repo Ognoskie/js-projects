@@ -18,3 +18,12 @@ const searchActivityByLocation = (activities, searchLocation) => {
 }
 
 // ask steve why do i have to return line 16 when i am returning line 15 already and line 16 is within line 15 brackets
+
+
+// another filter problem by chat
+
+const words = ["apple", "banana", "cherry", "date", "fig", "grape"];
+const minLength = 5;
+
+
+
